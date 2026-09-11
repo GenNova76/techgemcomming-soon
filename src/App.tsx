@@ -1,9 +1,10 @@
 import { lazy, Suspense } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Navbar from '@/components/navbar/Navbar';
 import Footer from '@/components/footer/Footer';
 import Chatbot from '@/components/chatbot/Chatbot';
 import { useAuth } from '@/context/AuthContext';
+
 
 const Home = lazy(() => import('@/pages/Home'));
 const About = lazy(() => import('@/pages/About'));
@@ -54,13 +55,31 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="/dashboard" element={<UserDashboard />} />
-            <Route path="/admin" element={<AdminDashboard />} />
+            <Route path="/admin" element={<AdminRoute />} />
             <Route path="*" element={<Home />} />
           </Routes>
         </Suspense>
       </ConditionalChrome>
     </BrowserRouter>
   );
+}
+
+function AdminRoute() {
+  const { user, profile, loading } = useAuth();
+
+  if (loading) {
+    return <PageLoader />;
+  }
+
+  if (!user) {
+    return <Navigate to="/login" replace />;
+  }
+
+  if (profile?.role !== 'admin') {
+    return <Navigate to="/dashboard" replace />;
+  }
+
+  return <AdminDashboard />;
 }
 
 export default App;

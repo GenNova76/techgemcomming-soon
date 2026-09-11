@@ -12,43 +12,53 @@ export default function Login() {
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
   const [loginType, setLoginType] = useState<'user' | 'admin'>('user');
-  const { signIn, user, profile } = useAuth();
+  const { signIn, signOut, user, profile, loading: authLoading } = useAuth();
   const navigate = useNavigate();
 
-  if (user) {
-    return <Navigate to={profile?.role === 'admin' ? '/admin' : '/dashboard'} replace />;
+  if (user && !authLoading) {
+    return (
+      <Navigate
+        to={profile?.role === 'admin' ? '/admin' : '/dashboard'}
+        replace
+      />
+    );
   }
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError('');
+
     if (!email || !password) {
       setError('Please fill in all fields');
       return;
     }
+
     setLoading(true);
-    const { error, role} = await signIn(email, password);
+
+    const { error, role } = await signIn(email, password);
+
     if (error) {
       setError(error);
       setLoading(false);
-    
-    else {
-     setLoading(false);
+      return;
     }
 
-    } 
-    if(loginType === 'admin' && role !== 'admin'){
+    // Admin login was selected, but this account is not an admin.
+    if (loginType === 'admin' && role !== 'admin') {
+      await signOut();
       setError('This account does not have administrator access.');
       setLoading(false);
       return;
     }
-    if(role === 'admin'){
-      navigate('/admin');
+
+    // Admin account
+    if (role === 'admin') {
+      navigate('/admin', { replace: true });
+      return;
     }
-    else {
-      setLoading(false);
-    }
-    
+
+    // Normal user account
+    navigate('/dashboard', { replace: true });
   };
 
   return (

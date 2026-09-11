@@ -144,10 +144,11 @@ LANGUAGE sql
 SECURITY DEFINER
 SET search_path = public
 AS $$
-  SELECT COALESCE(
-    (auth.jwt() -> 'app_metadata' ->> 'role') = 'admin'
-    OR (auth.jwt() ->> 'role') = 'admin',
-    false
+  SELECT EXISTS (
+    SELECT 1
+    FROM public.profiles
+    WHERE id = auth.uid()
+      AND role = 'admin'
   );
 $$;
 
