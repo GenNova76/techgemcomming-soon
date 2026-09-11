@@ -260,6 +260,8 @@ BEGIN
 END;
 $$;
 
+);
+
 GRANT EXECUTE ON FUNCTION is_admin() TO authenticated;
 GRANT EXECUTE ON FUNCTION admin_list_profiles() TO authenticated;
 GRANT EXECUTE ON FUNCTION admin_list_appointments() TO authenticated;

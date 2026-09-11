@@ -8,7 +8,7 @@ type AuthContextValue = {
   profile: Profile | null;
   loading: boolean;
   signUp: (email: string, password: string, fullName: string) => Promise<{ error: string | null }>;
-  signIn: (email: string, password: string) => Promise<{ error: string | null }>;
+  signIn: (email: string, password: string) => Promise<{ error: string | null; role: 'user'|'admin'|null; }>;
   signOut: () => Promise<void>;
   refreshProfile: () => Promise<void>;
 };
@@ -91,9 +91,42 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   };
 
   const signIn = async (email: string, password: string) => {
-    const { error } = await supabase.auth.signInWithPassword({ email, password });
-    if (error) return { error: error.message };
-    return { error: null };
+    const { data, error } = await supabase.auth.signInWithPassword({
+      email,
+      password,
+    });
+
+    if (error) {
+      return {
+        error: error.message,
+        role: null,
+      };
+    }
+
+    if (!data.user) {
+      return {
+        error: 'Login failed. User not found.',
+        role: null,
+      };
+    }
+
+    const { data: profileData, error: profileError } = await supabase
+      .from('profiles')
+      .select('role')
+      .eq('id', data.user.id)
+      .maybeSingle();
+
+    if (profileError) {
+      return {
+        error: profileError.message,
+        role: null,
+      };
+    }
+
+    return {
+      error: null,
+      role: profileData?.role === 'admin' ? 'admin' : 'user',
+    };
   };
 
   const signOut = async () => {
