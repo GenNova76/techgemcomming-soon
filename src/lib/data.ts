@@ -88,7 +88,7 @@ export const TEAM_MEMBERS = [
     name: 'Devesh Sahu',
     role: 'Founder & CEO',
     bio: 'Visionary leader with 3+ years in software architecture and product strategy.',
-    image: 'src/components/assets/team/Devesh-photo.jpeg',
+    image: 'https://lkagcztregnlydltoivz.supabase.co/storage/v1/object/public/team/Devesh-photo.jpeg',
 
     socials: {
       linkedin: 'https://www.linkedin.com/in/devesh-sahu-560608270',
@@ -100,7 +100,7 @@ export const TEAM_MEMBERS = [
     name: 'Sumit Yagik',
     role: 'Full Stack Developer',
     bio: 'Full-stack expert specializing in scalable systems and Websites.',
-    image: 'src/components/assets/team/Sumit-photo.png',
+    image: 'https://lkagcztregnlydltoivz.supabase.co/storage/v1/object/public/team/Sumit-photo.png',
 
     socials: {
       linkedin: "https://www.linkedin.com/in/sumit-yagik-26b588259/",
@@ -112,7 +112,7 @@ export const TEAM_MEMBERS = [
     name: 'Ayush Pandey',
     role: 'UI/UX Director',
     bio: 'Design thinker crafting beautiful, accessible, and intuitive interfaces.',
-    image: 'src/components/assets/team/Ayush-photo.png',
+    image: 'https://lkagcztregnlydltoivz.supabase.co/storage/v1/object/public/team/Ayush-photo.png',
 
     socials: {
       linkedin: "https://www.linkedin.com/in/ayush-pandey-9245932a6",
@@ -124,7 +124,7 @@ export const TEAM_MEMBERS = [
     name: 'Saksham Singh',
     role: 'Client Support Executive',
     bio: 'Dedicated support professional driving customer satisfaction, rapid resolution, and seamless experiences.',
-    image: 'src/components/assets/team/Saksham-photo.jpeg',
+    image: 'https://lkagcztregnlydltoivz.supabase.co/storage/v1/object/public/team/Saksham-photo.jpeg',
     
     socials: {
       linkedin: "https://www.linkedin.com/in/saksham-singh-7671a12a7?",
@@ -136,7 +136,7 @@ export const TEAM_MEMBERS = [
     name: 'Deepak Sahu',
     role: 'Social Media Manager',
     bio: 'Crafting stories and strategy to amplify tech brands and grow engaged communities.',
-    image: 'src/components/assets/team/Deepak-photo.png', 
+    image: 'https://lkagcztregnlydltoivz.supabase.co/storage/v1/object/public/team/Deepak-photo.png', 
   
     socials: {
       linkedin: "https://www.linkedin.com/in/deepak-sahu-910510328",
@@ -148,7 +148,7 @@ export const TEAM_MEMBERS = [
     name: 'Bhumi Singh',
     role: 'Frontend Developer',
     bio: 'Specializing in building responsive, accessible, and high-performance web applications that deliver seamless user experiences.',
-    image: 'src/components/assets/team/Bhumi-photo.png', 
+    image: 'https://lkagcztregnlydltoivz.supabase.co/storage/v1/object/public/team/Bhumi-photo.png', 
   
     socials: {
       linkedin: "https://www.linkedin.com/in/bhumi-singh-33605335a",
@@ -160,7 +160,7 @@ export const TEAM_MEMBERS = [
     name: 'Gaurav Gupta',
     role: 'Backend Developer',
     bio: 'Focused on architecting scalable APIs, optimizing database performance, and building secure systems.',
-    image: 'src/components/assets/team/Gaurav-photo.png', 
+    image: 'https://lkagcztregnlydltoivz.supabase.co/storage/v1/object/public/team/Gaurav-photo.png', 
   
     socials: {
       linkedin: "https://www.linkedin.com/in/gaurav-gupta-b203171b5",
