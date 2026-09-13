@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="TechGem — Your Ideas. Our Technology. Something new is coming soon." />
+  <title>TechGem — Coming Soon</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+  <div class="stars"></div>
+
+  <main class="page-shell">
+
+    <!-- NAVBAR -->
+    <nav class="navbar" aria-label="Main navigation">
+
+      <a class="brand" href="#top" aria-label="TechGem home">
+        <img src="assets/logo.png" alt="TechGem" />
+      </a>
+
+      <div class="nav-links">
+        <a class="active" href="#top">Home</a>
+        <a href="#vision">Vision</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <a class="nav-cta" href="#notify">
+        Notify Me <span>→</span>
+      </a>
+
+    </nav>
+
+
+    <!-- HERO -->
+    <section class="hero" id="top">
+
+      <div class="hero-copy">
+
+        <div class="eyebrow">
+          <span></span>
+          COMING SOON
+          <span></span>
+        </div>
+
+        <h1>
+          <span>TechGem</span> is<br />
+          building something<br />
+          amazing<span class="dot">.</span>
+        </h1>
+
+        <p class="tagline">
+          Your Ideas. Our Technology.
+        </p>
+
+        <p class="intro">
+          We're preparing a new digital experience to help businesses and
+          individuals build, learn and grow with technology.
+        </p>
+
+
+        <!-- EMAIL FORM -->
+        <form
+          class="notify-form"
+          id="notifyForm"
+          action="https://formsubmit.co/hello@techgem.in"
+          method="POST"
+        >
+
+          <!-- Email received by TechGem -->
+          <input
+            type="hidden"
+            name="_subject"
+            value="New TechGem Coming Soon Subscriber"
+          />
+
+          <!-- TechGem email format -->
+          <input
+            type="hidden"
+            name="_template"
+            value="table"
+          />
+
+          <!-- Keep spam protection enabled -->
+          <input
+            type="hidden"
+            name="_captcha"
+            value="true"
+          />
+
+          <!-- Visitor confirmation email -->
+          <input
+            type="hidden"
+            name="_autoresponse"
+            value="Hi! Thank you for joining TechGem. Your email has been successfully registered for launch updates. We will let you know when TechGem goes live. Your Ideas. Our Technology. — Team TechGem"
+          />
+
+          <!-- Return visitor to the website -->
+          <input
+            type="hidden"
+            name="_next"
+            id="nextUrl"
+            value=""
+          />
+
+          <!-- Visitor's email -->
+          <input
+            type="email"
+            name="email"
+            placeholder="Enter your email address"
+            aria-label="Email address"
+            required
+          />
+
+          <button type="submit">
+            Get Notified <span>→</span>
+          </button>
+
+        </form>
+
+
+        <p class="form-note" id="formNote">
+          Be the first to know. No spam, just updates.
+        </p>
+
+
+        <!-- COUNTDOWN -->
+        <div class="countdown" aria-label="Countdown to TechGem launch">
+
+          <div class="count-card">
+            <strong id="days">00</strong>
+            <span>Days</span>
+          </div>
+
+          <div class="count-card">
+            <strong id="hours">00</strong>
+            <span>Hours</span>
+          </div>
+
+          <div class="count-card">
+            <strong id="minutes">00</strong>
+            <span>Minutes</span>
+          </div>
+
+          <div class="count-card">
+            <strong id="seconds">00</strong>
+            <span>Seconds</span>
+          </div>
+
+        </div>
+
+        <p class="launch-date">
+          Launching September 24, 2026
+        </p>
+
+      </div>
+
+
+      <!-- 3D TECHGEM VISUAL -->
+      <div class="hero-visual" aria-hidden="true">
+
+        <div class="orbit orbit-a"></div>
+        <div class="orbit orbit-b"></div>
+
+        <div class="orbital-core">
+
+          <div class="core-ring ring-gold"></div>
+          <div class="core-ring ring-teal"></div>
+
+          <div class="core-t">
+            T
+          </div>
+
+        </div>
+
+        <div class="floating-label label-build">
+          BUILD
+        </div>
+
+        <div class="floating-label label-learn">
+          LEARN
+        </div>
+
+        <div class="floating-label label-grow">
+          GROW
+        </div>
+
+      </div>
+
+
+      <!-- SIDE TEXT -->
+      <div class="side-note">
+        A<br />
+        Smarter<br />
+        Tomorrow.
+      </div>
+
+      <div class="side-values">
+        BUILD<br />
+        LEARN<br />
+        GROW
+      </div>
+
+
+      <!-- HORIZON -->
+      <div class="horizon">
+
+        <div class="horizon-glow"></div>
+        <div class="planet"></div>
+
+      </div>
+
+    </section>
+
+
+    <!-- VISION -->
+    <section class="vision" id="vision">
+
+      <p class="section-label">
+        WHAT WE'RE BUILDING
+      </p>
+
+      <h2>
+        Technology with a <span>purpose.</span>
+      </h2>
+
+      <p class="section-copy">
+        TechGem brings practical technology, digital solutions and
+        hands-on learning together — built around real ideas and real needs.
+      </p>
+
+
+      <div class="vision-grid">
+
+        <article>
+          <span>01</span>
+          <h3>Build</h3>
+          <p>
+            Modern websites and digital solutions designed around real requirements.
+          </p>
+        </article>
+
+        <article>
+          <span>02</span>
+          <h3>Learn</h3>
+          <p>
+            Practical workshops that turn technology into skills you can actually use.
+          </p>
+        </article>
+
+        <article>
+          <span>03</span>
+          <h3>Grow</h3>
+          <p>
+            Helping people and businesses move forward with smarter technology.
+          </p>
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- NOTIFY -->
+    <section class="notify-section" id="notify">
+
+      <p class="section-label">
+        STAY IN THE LOOP
+      </p>
+
+      <h2>
+        Be the first to know.
+      </h2>
+
+      <p>
+        We're getting ready. Join TechGem for launch updates.
+      </p>
+
+      <a class="big-cta" href="#notifyForm">
+        Notify Me <span>→</span>
+      </a>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer id="contact">
+
+      <div class="footer-brand">
+
+        <img src="assets/logo.png" alt="TechGem" />
+
+        <small>
+          Your Ideas. Our Technology.
+        </small>
+
+      </div>
+
+
+      <div class="socials">
+
+        <a
+          href="https://www.linkedin.com/company/techgem-india/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="TechGem on LinkedIn"
+        >
+          <span>in</span>
+        </a>
+
+
+        <a
+          href="https://www.instagram.com/techgem.in?stkn=a2lkanZuc2I2M2gw"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="TechGem on Instagram"
+        >
+          <span>◎</span>
+        </a>
+
+
+        <a
+          href="mailto:hello@techgem.in"
+          aria-label="Email TechGem"
+        >
+          <span>✉</span>
+        </a>
+
+      </div>
+
+
+      <p>
+        © 2026 TechGem. All rights reserved.
+      </p>
+
+    </footer>
+
+  </main>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>
